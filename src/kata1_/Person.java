@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Person {
     private final String name;
-    private final Date birthday;
+    private Date birthday;
     private static final int MS_PER_SECOND = 1000;
     private static final int SECONDS_PER_MINUTE = 60;
     private static final int MINUTES_PER_HOUR = 60;
@@ -33,9 +33,12 @@ public class Person {
     private int toYears (long ms) {
         return (int) ((int) (ms)/ MS_PER_YEAR);              
     }
-    
+
     @Override
-    public 
+    public String toString() {
+        return ("Person{"+ "name="+ name + ",birthday=" + birthday + '}' );
+    } 
+            
     
     
 
